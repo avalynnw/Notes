@@ -57,7 +57,7 @@ app.post('/api/notes', (req, res) => {
   console.info(`${req.method} request received to add a note`);
 
   // Destructure the json information
-  const [{ title, text }] = req.body;
+  const { title, text } = req.body;
 
   // if the body exists
   if (req.body) {
