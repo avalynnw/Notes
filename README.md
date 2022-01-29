@@ -1,4 +1,4 @@
-# Server-based notetaking app
+# Server-based note-taking app
 
 ## Description
 
