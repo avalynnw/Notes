@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const util = require('util');
-const gen_id = require('./helper_functions/gen_id');
+var uniqid = require('uniqid');
 
 // declare port
 const port = process.env.PORT || 3001
@@ -67,7 +67,7 @@ app.post('/api/notes', (req, res) => {
     const new_note = {
       title,
       text,
-      id: gen_id(),
+      id: uniqid(),
     };
     // read from json file then append the note to the file
     readAndAppend(new_note, './db/db.json');
